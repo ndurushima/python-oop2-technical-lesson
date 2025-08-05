@@ -29,7 +29,18 @@ class Dog:
   
   def find_checkup(self, date):
     for checkup in self.checkups:
-      if checkup["dates"] == date:
+      if checkup["date"] == date:
         print(f"Checkup on {date} with {checkup['vet']}: {checkup['notes']}")
         return
     print(f"No checkup found on {date}")
+
+fido = Dog(
+   name = "Fido",
+   age = 3, 
+   breed = "Golden Retriever"
+   )
+fido.add_checkup("Doolittle", "02/20/22","Good health!")
+print(fido.vets)
+print(fido.checkups)
+fido.find_checkup("02/20/22")
+fido.find_checkup("03/22/24")

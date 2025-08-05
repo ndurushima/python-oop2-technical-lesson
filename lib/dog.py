@@ -1,9 +1,10 @@
 class Dog:
-  def __init__(self, name, breed, age, last_checkup = None):
+  def __init__(self, name, breed, age):
     self.name = name
     self.breed = breed
     self.age = age
-    self.last_checkup = last_checkup
+    self.vets = []
+    self.checkups = []
 
   def get_age(self):
     return self._age

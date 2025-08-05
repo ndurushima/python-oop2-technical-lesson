@@ -6,11 +6,13 @@ class Dog:
     self.vets = []
     self.checkups = []
 
-  def get_age(self):
+  @property
+  def age(self):
     return self._age
-  def set_age(self,value):
+  
+  @age.setter
+  def age(self,value):
     if type(value) is int and 0 <= value:
       self._age = value
     else:
       print("Not valid age")
-  age = property(get_age,set_age)

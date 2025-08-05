@@ -26,3 +26,10 @@ class Dog:
       'notes': notes
     }
     self.checkups.append(new_checkup)
+  
+  def find_checkup(self, date):
+    for checkup in self.checkups:
+      if checkup["dates"] == date:
+        print(f"Checkup on {date} with {checkup['vet']}: {checkup['notes']}")
+        return
+    print(f"No checkup found on {date}")

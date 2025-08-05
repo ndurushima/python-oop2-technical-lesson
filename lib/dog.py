@@ -16,3 +16,13 @@ class Dog:
       self._age = value
     else:
       print("Not valid age")
+  
+  def add_checkup(self, vet, date, notes):
+    if vet not in self.vets:
+      self.vets.append(vet)
+    new_checkup = {
+      'vet': vet,
+      'date': date,
+      'notes': notes
+    }
+    self.checkups.append(new_checkup)
